@@ -17,40 +17,40 @@ public:
     ImageData* getImageB();
     void exectePreProcess();
 protected:
-    void processA();            // Ö´ĞĞAÍ¼Æ¬´¦Àí
-    void processB();            // Ö´ĞĞBÍ¼Æ¬´¦Àí
-    void imageDataToMat();      // ½«ImageDataÊı¾İÀàĞÍ×ª»»ÎªMatÊı¾İÀàĞÍ
-    void matToImageData();      // ½«MatÊı¾İÀàĞÍ×ª»»ÎªImageDataÊı¾İÀàĞÍ
-    void imageDataToHImage();   // ½«ImageDataÊı¾İÀàĞÍ×ª»»ÎªHImageÊı¾İÀàĞÍ
-    void HImageToImageData();   // ½«HImageÊı¾İÀàĞÍ×ª»»ÎªImageDataÊı¾İÀàĞÍ
-    // demo                       Á÷³ÌÀı×Ó¡ª¡ªÍõ·ÉÔ¾
+    void processA();            // æ‰§è¡ŒAå›¾ç‰‡å¤„ç†
+    void processB();            // æ‰§è¡ŒBå›¾ç‰‡å¤„ç†
+    void imageDataToMat();      // å°†ImageDataæ•°æ®ç±»å‹è½¬æ¢ä¸ºMatæ•°æ®ç±»å‹
+    void matToImageData();      // å°†Matæ•°æ®ç±»å‹è½¬æ¢ä¸ºImageDataæ•°æ®ç±»å‹
+    void imageDataToHImage();   // å°†ImageDataæ•°æ®ç±»å‹è½¬æ¢ä¸ºHImageæ•°æ®ç±»å‹
+    void HImageToImageData();   // å°†HImageæ•°æ®ç±»å‹è½¬æ¢ä¸ºImageDataæ•°æ®ç±»å‹
+    // demo                       æµç¨‹ä¾‹å­â€”
     void hist(Mat matInput);
     //void hist_halcon(Hobject& hobjectInout);
-    // Preprocess-Image Calulator Í¼ÏñÔËËã²Ù×÷¡ª¡ªÖÜÇÚÔ¶
+    // Preprocess-Image Calulator å›¾åƒè¿ç®—æ“ä½œâ€”â€”
 //    void rotateImage(Hobject& himage);
 //    void invertImage(Hobject& himage);
     void calculator(structImageCalculatorProcessor calculatorProcessor,Hobject& himage);
 
-    // Preprocess-Image Binning   Í¼Ïñ·ÖÀà(resize)²Ù×÷¡ª¡ªÌÕ³É´¨
+    // Preprocess-Image Binning   å›¾åƒåˆ†ç±»(resize)æ“ä½œâ€”
 
-    // Preprocess-Image Fliter    ¹ıÂËÆ÷²Ù×÷¡ª¡ªÍòÇ§
+    // Preprocess-Image Fliter    è¿‡æ»¤å™¨æ“ä½œâ€”â€”
 
     // Preprocess-Image Generator
 
-    // Preprocess-Image Shift     Í¼ÏñÒÆÎ»²Ù×÷¡ª¡ª¹¨å·æÃ
+    // Preprocess-Image Shift     å›¾åƒç§»ä½æ“ä½œâ€”â€”
 private:
     ImageData* imgAInput;
     ImageData* imgBInput;
-    bool imageGetted;                       // ÊäÈëÊä³öÊı¾İÀàĞÍ
+    bool imageGetted;                       // è¾“å…¥è¾“å‡ºæ•°æ®ç±»å‹
     Mat matAInput;
     Mat matBInput;
     Hobject himageInputA;
     Hobject himageInputB;
 //    Hobject himageOutputA;
 //    Hobject himageOutputB;
-    bool matGetted;                         // Ô¤´¦ÀíÊı¾İÀàĞÍ
-    structProcessorGroup processAGroup;     // AÍ¼Æ¬´¦Àí²ÎÊı
-    structProcessorGroup processBGroup;     // BÍ¼Æ¬´¦Àí²ÎÊı
+    bool matGetted;                         // é¢„å¤„ç†æ•°æ®ç±»å‹
+    structProcessorGroup processAGroup;     // Aå›¾ç‰‡å¤„ç†å‚æ•°
+    structProcessorGroup processBGroup;     // Bå›¾ç‰‡å¤„ç†å‚æ•°
     bool parameterGetted;
 };
 
